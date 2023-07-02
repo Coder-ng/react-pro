@@ -5,7 +5,6 @@ import logo from "../logo.svg";
 
 import { routes } from "./routes";
 
-
 export const Navigation = () => {
   return (
     <Suspense fallback={<span>Loading...</span>}>
@@ -16,7 +15,7 @@ export const Navigation = () => {
             <ul>
               {routes.map(({ path, to, name }) => (
                 <li key={path}>
-                  <NavLink to={to} activeClassName="nav-active" exact>
+                  <NavLink to={to} activeClassName="nav-active">
                     {name}
                   </NavLink>
                 </li>
