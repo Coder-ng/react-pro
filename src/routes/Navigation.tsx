@@ -35,17 +35,20 @@ export const Navigation = () => {
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/">
-            <ShoppingPage />
-          </Route>
-          <Route path="/about">
-            <h1>About</h1>
-          </Route>
-          <Route path="/users">
-            <h1>Users</h1>
-          </Route>
-        </Switch>
+            
+          <div className="contenido">
+          <Switch>
+            <Route path="/">
+              <ShoppingPage />
+            </Route>
+            <Route path="/about">
+              <h1>About</h1>
+            </Route>
+            <Route path="/users">
+              <h1>Users</h1>
+            </Route>
+          </Switch>
+          </div>
       </div>
     </Router>
   );

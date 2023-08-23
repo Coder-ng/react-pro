@@ -1,26 +1,85 @@
 import React from "react";
-import { ButtonsBottomProduct, ProductCard, ProductImage, TittleProduct } from "../components/ProductCard";
-
+import {
+  ButtonsBottomProduct,
+  ProductCard,
+  ProductImage,
+  TittleProduct,
+} from "../components/ProductCard";
+import styles from "../styles/styles.module.css";
 
 const product = {
-    id:'1', 
-    tittle:'producto 1',
-    img:"./coffee-mug.png"
-}
+  id: "1",
+  tittle: "producto 1",
+  img: "./coffee-mug.png",
+};
 
 export const ShoppingPage = () => {
   return (
     <div>
-      <h1>Shopping Store</h1>
-      <hr />
+      <header>
+        <h1 className="titleheadercomp">Shopping Store</h1>
+        <hr />
+      </header>
 
-      <ProductCard  product={product}>
-        <ProductImage/>
-        <TittleProduct tittle={product.tittle}/>
-        <ButtonsBottomProduct state={0} functionNumeric={function (value: number): void {
-          throw new Error("Function not implemented.");
-        } } />
-      </ProductCard>
+      <div className={styles.productContent}>
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+
+        <ProductCard product={product}>
+          <ProductImage />
+          <TittleProduct tittle="" />
+          <ButtonsBottomProduct />
+        </ProductCard>
+      </div>
     </div>
   );
 };

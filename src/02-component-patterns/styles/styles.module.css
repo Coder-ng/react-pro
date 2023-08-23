@@ -1,14 +1,22 @@
 
 
+.productContent { /* pendiente de flotar elementos unos al lado de otros y respete el area */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 .productCard {
     background-color: white;
     border-radius: 15px;
     color: black;
     padding-bottom: 5px;
     width: 250px;
-    margin-right: 5px;
     margin-top: 5px;
-}
+    margin: 5px;
+
+    }
 
 .productImg {
     border-radius: 15px 15px 0px 0px;

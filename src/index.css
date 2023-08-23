@@ -16,8 +16,13 @@ code {
 
 
 .main-layout {
-  display: flex;
-  flex-direction: row;
+display: grid;
+ grid-template-areas: 
+ "lateral header header header header"
+ "lateral contenido contenido contenido contenido"
+ "lateral contenido contenido contenido contenido"
+ "lateral contenido contenido contenido contenido";
+
 }
 
 nav {
@@ -26,7 +31,10 @@ nav {
   margin-right: 15px;
   text-align: center;
   width: 250px;
+  grid-area: lateral;
 }
+
+
 nav ul {
   align-items: center;
   display: flex;
@@ -49,4 +57,9 @@ nav li a {
 .nav-active {
   color: grey;
   transition: all .3s ease-out;
+}
+
+.contenido{
+  display: grid;
+  grid-area: contenido;
 }

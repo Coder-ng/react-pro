@@ -5,7 +5,7 @@ export const useProduct = () => {
     const [count, setCount] = useState(0)
 
     const increasBy = (value: number) => {
-        setCount(prev => Math.max(prev + value,0))
+        setCount(prev => Math.max(prev + value, 0))
     }
 
   return {
