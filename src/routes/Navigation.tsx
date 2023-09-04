@@ -35,8 +35,8 @@ export const Navigation = () => {
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-            
-          <div className="contenido">
+
+        <div>
           <Switch>
             <Route path="/">
               <ShoppingPage />
@@ -48,7 +48,7 @@ export const Navigation = () => {
               <h1>Users</h1>
             </Route>
           </Switch>
-          </div>
+        </div>
       </div>
     </Router>
   );

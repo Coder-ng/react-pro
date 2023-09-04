@@ -4,12 +4,12 @@ import {
   ProductCard,
   ProductImage,
   TittleProduct,
-} from "../components/ProductCard";
+} from "../components";
 import styles from "../styles/styles.module.css";
 
 const product = {
   id: "1",
-  tittle: "producto 1",
+  title: "producto 1",
   img: "./coffee-mug.png",
 };
 
@@ -17,67 +17,28 @@ export const ShoppingPage = () => {
   return (
     <div>
       <header>
-        <h1 className="titleheadercomp">Shopping Store</h1>
-        <hr />
+        <h1>
+          <span className={styles.titleheadercomp}>Shopping Store</span>
+        </h1>
       </header>
 
       <div className={styles.productContent}>
         <ProductCard product={product}>
           <ProductImage />
-          <TittleProduct tittle="" />
+          <TittleProduct />
           <ButtonsBottomProduct />
         </ProductCard>
 
         <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
+          <ProductCard.Image />
+          <ProductCard.Title title={"hola mundo"} />
+          <ProductCard.Buttons />
         </ProductCard>
 
         <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
-        </ProductCard>
-
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct tittle="" />
-          <ButtonsBottomProduct />
+          <ProductCard.Image />
+          <ProductCard.Title title={"hola mundo"} />
+          <ProductCard.Buttons />
         </ProductCard>
       </div>
     </div>

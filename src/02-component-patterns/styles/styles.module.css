@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: -10px;
 }
 
 
@@ -67,4 +68,10 @@
 
 .buttonAdd:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.titleheadercomp{
+    border-bottom: 2px solid rgb(255, 255, 255);
+
+
 }
