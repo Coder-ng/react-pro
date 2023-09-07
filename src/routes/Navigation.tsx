@@ -20,7 +20,7 @@ export const Navigation = () => {
             <nav>
               <img src={logo} alt="React Logo" />
               <ul>
-                {routes.map(({ path,to, name }) => (
+                {routes.map(({ path, to, name }) => (
                   <li key={path}>
                     <NavLink to={to} activeClassName="nav-active" exact>
                       {name}
@@ -33,13 +33,13 @@ export const Navigation = () => {
             {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
 
-              <Switch>
-                {routes.map(({ path, Component }) => (
-                       <Route key={path} path={path} component={() => <Component />} />
-                ))}
+            <Switch>
+              {routes.map(({ path, Component }) => (
+                <Route key={path} path={path} component={() => <Component />} />
+              ))}
 
-                <Redirect to={routes[0].path}/>
-              </Switch>
+              <Redirect to={routes[0].path} />
+            </Switch>
           </div>
         </Router>
       </Suspense>

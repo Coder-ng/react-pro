@@ -26,7 +26,10 @@ export const ShoppingPage = () => {
       <div className={styles.productContent}>
         <ProductCard product={product} className="bg-dark text-white">
           <ProductImage className="custom-image" />
-          <TittleProduct className="text-white text-bold" activeClass="active" />
+          <TittleProduct
+            className="text-white text-bold"
+            activeClass="active"
+          />
           <ButtonsBottomProduct className="custom-buttons" />
         </ProductCard>
 
@@ -35,7 +38,7 @@ export const ShoppingPage = () => {
           <ProductCard.Title
             title={"hola mundo"}
             className="text-white text-bold"
-            activeClass="active" 
+            activeClass="active"
           />
           <ProductCard.Buttons className="custom-buttons" />
         </ProductCard>
@@ -47,7 +50,7 @@ export const ShoppingPage = () => {
             className="text-white text-bold"
           />
           <ProductCard.Buttons className="custom-buttons" />
-        </ProductCard> 
+        </ProductCard>
       </div>
     </div>
   );
