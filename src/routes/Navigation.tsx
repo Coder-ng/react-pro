@@ -7,6 +7,8 @@ import {
 
 import logo from "../logo.svg";
 import { ShoppingPage } from "../02-component-patterns/pages/ShoppingPage";
+import { About } from "../02-component-patterns/pages/About";
+import { Users } from "../02-component-patterns/pages/Users";
 
 export const Navigation = () => {
   return (
@@ -42,10 +44,10 @@ export const Navigation = () => {
               <ShoppingPage />
             </Route>
             <Route path="/about">
-              <h1>About</h1>
+              <About />
             </Route>
             <Route path="/users">
-              <h1>Users</h1>
+              <Users />
             </Route>
           </Switch>
         </div>

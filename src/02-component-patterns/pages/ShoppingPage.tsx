@@ -6,6 +6,7 @@ import {
   TittleProduct,
 } from "../components";
 import styles from "../styles/styles.module.css";
+import "../styles/custom-style.css";
 
 const product = {
   id: "1",
@@ -23,23 +24,30 @@ export const ShoppingPage = () => {
       </header>
 
       <div className={styles.productContent}>
-        <ProductCard product={product}>
-          <ProductImage />
-          <TittleProduct />
-          <ButtonsBottomProduct />
+        <ProductCard product={product} className="bg-dark text-white">
+          <ProductImage className="custom-image" />
+          <TittleProduct className="text-white text-bold" activeClass="active" />
+          <ButtonsBottomProduct className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard product={product}>
-          <ProductCard.Image />
-          <ProductCard.Title title={"hola mundo"} />
-          <ProductCard.Buttons />
+        <ProductCard product={product} className="bg-dark text-white">
+          <ProductCard.Image className="custom-image" />
+          <ProductCard.Title
+            title={"hola mundo"}
+            className="text-white text-bold"
+            activeClass="active" 
+          />
+          <ProductCard.Buttons className="custom-buttons" />
         </ProductCard>
 
-        <ProductCard product={product}>
-          <ProductCard.Image />
-          <ProductCard.Title title={"hola mundo"} />
-          <ProductCard.Buttons />
-        </ProductCard>
+        <ProductCard product={product} className="bg-dark text-white">
+          <ProductCard.Image className="custom-image" />
+          <ProductCard.Title
+            title={"hola mundo"}
+            className="text-white text-bold"
+          />
+          <ProductCard.Buttons className="custom-buttons" />
+        </ProductCard> 
       </div>
     </div>
   );
