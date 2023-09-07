@@ -52,3 +52,4 @@ export const ShoppingPage = () => {
     </div>
   );
 };
+export default ShoppingPage;
