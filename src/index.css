@@ -28,7 +28,7 @@ display: grid;
 nav {
   background-color: #363a45;
   height: 100vh;
-  margin-right: 15px;
+  margin-right: 10px;
   text-align: center;
   width: 250px;
   grid-area: lateral;
@@ -61,5 +61,6 @@ nav li a {
 
 /* .contenido{
   display: grid;
-  grid-area: contenido;
+  grid-area: header;
 } */
+

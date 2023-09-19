@@ -1,63 +1,70 @@
-import React from "react";
 import {
-  ButtonsBottomProduct,
   ProductCard,
-  ProductImage,
-  TittleProduct,
 } from "../components";
 import styles from "../styles/styles.module.css";
 import "../styles/custom-style.css";
+import { Product } from "../interfaces/interfaces";
+import { useShoppingCart } from "../hooks/useShoppingCart";
 
-const product = {
-  id: "1",
-  title: "producto 1",
-  img: "./coffee-mug.png",
-};
+const products: Product[] = [
+  {
+    id: "1",
+    title: "Coffe mug - Card",
+    img: "./coffee-mug.png",
+  },
+  {
+    id: "2",
+    title: "Coffe mug - meme ",
+    img: "./coffee-mug2.png",
+  },
+];
 
 export const ShoppingPage = () => {
+  const { onChangeValueCart, ShoppingCar } = useShoppingCart();
+
   return (
-    <div>
-      <header>
+    <div className="content-page">
+      <header className="headerTitle">
         <h1>
           <span className={styles.titleheadercomp}>Shopping Store</span>
         </h1>
       </header>
 
       <div className={styles.productContent}>
-        <ProductCard product={product} className="bg-dark text-white">
-          <ProductImage className="custom-image" />
-          <TittleProduct
-            className="text-white text-bold"
-            activeClass="active"
-          />
-          <ButtonsBottomProduct className="custom-buttons" />
-        </ProductCard>
-
-        <ProductCard product={product} className="bg-dark text-white">
-          <ProductCard.Image className="custom-image" />
-          <ProductCard.Title
-            title={"hola mundo"}
-            className="text-white text-bold"
-            activeClass="active"
-          />
-          <ProductCard.Buttons className="custom-buttons" />
-        </ProductCard>
-
-        <ProductCard
-         product={product} 
-         className="bg-dark text-white"
-         style={{background:"red"}}
-         >
-          <ProductCard.Image className="custom-image" />
-          <ProductCard.Title
-            title={"hola mundo"}
-            className="text-white"
-           style={{display:"flex", justifyContent:'center',fontWeight:'bold'}}
-
-          />
-          <ProductCard.Buttons className="custom-buttons" style={{display:"flex", justifyContent:'center'}}/>
-        </ProductCard>
+        {products.map((product) => (
+          <ProductCard
+            product={product}
+            key={product.id}
+            className="bg-dark text-white"
+            onChange={onChangeValueCart}
+            value={ShoppingCar[product.id]?.count || 0}
+          >
+            <ProductCard.Image className="custom-image" />
+            <ProductCard.Title
+              className="text-white text-bold"
+              activeClass="active"
+            />
+            <ProductCard.Buttons className="custom-buttons" />
+          </ProductCard>
+        ))}
       </div>
+
+      <div className="shopping-cart">
+        {Object.entries(ShoppingCar).map(([key, product]) => (
+          <ProductCard
+            key={key}
+            product={product}
+            className="bg-dark text-white"
+            style={{ width: "100px" }}
+            value={product.count}
+            onChange={onChangeValueCart}
+          >
+            <ProductCard.Image className="custom-image" />
+            <ProductCard.Buttons className="custom-buttons" />
+          </ProductCard>
+        ))}
+      </div>
+      {/* {JSON.stringify(ShoppingCar, null, 5)} */}
     </div>
   );
 };

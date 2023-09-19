@@ -1,11 +1,13 @@
 
 
+
 .productContent { /* pendiente de flotar elementos unos al lado de otros y respete el area */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: -10px;
 }
+
 
 
 .productCard {
