@@ -14,21 +14,20 @@ export const useShoppingCart = () => {
     count: number;
   }) => {
     setShoppingCar((oldShopinCar) => {
-      const productInCar: ProductInCart = oldShopinCar[product.id] || {
-        ...product,
-        count: 0,
-      };
+      
+      if (count === 0) {
 
-      if (Math.max(productInCar.count + count, 0) > 0) {
-        productInCar.count += count;
-        return {
-          ...oldShopinCar,
-          [product.id]: productInCar,
-        };
-      }
-      // Borrar el producto
+     // Borrar el producto
       const { [product.id]: toDelete, ...rest } = oldShopinCar;
       return rest;
+      }
+
+      // agregar producto con cantidad actualizada
+        return {
+          ...oldShopinCar,
+          [product.id]: {...product, count},
+        };
+  
     });
   };
 
